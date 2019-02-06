@@ -26,21 +26,9 @@ namespace CursoWPF01
             
         }
 
-        private void btnCalcular_Click(object sender, RoutedEventArgs e)
-        {
-            var nome = txbNome.Text;
-            double qtd = Convert.ToDouble(txbQtdHoras.Text);
-            double valor = Convert.ToDouble(txbValorHora.Text);
-            double salarioLiquido = qtd * valor;
+        
 
-            txbSalarioliquido.Text = salarioLiquido.ToString();
-        }
-
-        private void TxbTexto_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //btnBind.Content = txbTexto.Text;
-        }
-
+       
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -50,6 +38,31 @@ namespace CursoWPF01
         {
             ListViewTest lvt = new ListViewTest();
             lvt.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Bind bind = new Bind();
+            bind.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            DockPanel dockPanel = new DockPanel();
+            dockPanel.ShowDialog();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            CalculoSalario calculoSalario = new CalculoSalario();
+            calculoSalario.ShowDialog();
+        }
+
+        private void BtnStackpanel_Click(object sender, RoutedEventArgs e)
+        {
+            StackPanel stackPanel = new StackPanel();
+            stackPanel.ShowDialog();
         }
     }
 }

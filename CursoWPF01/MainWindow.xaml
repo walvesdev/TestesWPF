@@ -5,50 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursoWPF01"
         mc:Ignorable="d"
-        Title="CursoWPF01" Height="879" Width="836">
-    <Grid>
-        <Label Content="Nome do Funcionaário.:&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.238,-4.032"/>
-        <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="10,38,0,0"/>
-        <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="85,240,0,0" Click="btnCalcular_Click" Foreground="#FFF1EAEA" RenderTransformOrigin="0.587,10.85">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFA5B8C5" Offset="0"/>
-                    <GradientStop Color="#FF8FA7B8" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Label Content="Qtd. Horas Trabalhadas.:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbQtdHoras" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="10,92,0,0" ToolTip="Informe a quantidade de horas trabalhadas."/>
-        <Label Content="Valor Hora.:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,120,0,0"/>
-        <TextBox x:Name="txbValorHora" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="10,146,0,0" ToolTip="Informe o valor das horas trabalhadas."/>
-        <TextBox x:Name="txbSalarioliquido" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="10,195,0,0" IsEnabled="False"/>
-        <Label Content="Salario Liquido.:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,169,0,0"/>
-        <Button x:Name="btnBind" Content="{Binding Text, ElementName=txbTexto}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="405" Margin="224,10,0,0" Height="82">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFF3F1F1" Offset="0.007"/>
-                    <GradientStop Color="#FFBBB5B5" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <TextBox x:Name="txbTexto" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="405" Margin="224,97,0,0" TextChanged="TxbTexto_TextChanged"/>
-        <DockPanel HorizontalAlignment="Left" Height="183" LastChildFill="False" Margin="224,125,0,0" VerticalAlignment="Top" Width="405">
-            <Button Content="Button1" Height="34" VerticalAlignment="Top" DockPanel.Dock="Top"/>
-            <Button Content="Button2" Height="132" VerticalAlignment="Top" DockPanel.Dock="Left"/>
-            <Button Content="Button3" Height="132" VerticalAlignment="Top" DockPanel.Dock="Right"/>
-        </DockPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Height="220" Margin="23,337,0,0" VerticalAlignment="Top" Width="661">
-            <TextBlock Margin="10" FontSize="20" Text="Como você gosta do seu café?" HorizontalAlignment="Center" />
-            <Button Margin="10" Content="Preto"/>
-            <Button Margin="10" Content="Com leite"/>
-            <Button Margin="10" Content="Expresso"/>
-            <Button Margin="10">Cappuchino</Button>
-        </StackPanel>
-        <TabControl HorizontalAlignment="Left" Height="100" Margin="43,607,0,0" VerticalAlignment="Top" Width="600" SelectionChanged="TabControl_SelectionChanged">
+        Title="CursoWPF01" Height="484" Width="838" HorizontalAlignment="Center" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Right" Width="828">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="116*"/>
+            <RowDefinition Height="337*"/>
+        </Grid.RowDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="100" Margin="6,8,0,0" VerticalAlignment="Top" Width="812" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Inicio">
-                <Grid Background="#FFE5E5E5">
-                    <Button Content="Mostrar ListView" Margin="10,10,479,10" Click="Button_Click"/>
-                    <Button Content="Button" Margin="120,10,400,10"/>
+                <Grid Background="#FFE5E5E5" HorizontalAlignment="Right" Width="806">
+                    <Button Content="Mostrar ListView" Margin="10,10,691,10" Click="Button_Click"/>
+                    <Button Content="Calculo Funcionario" Margin="120,10,577,10" Click="Button_Click_3"/>
+                    <Button Content="DockPanel" HorizontalAlignment="Left" Margin="358,10,0,10" Width="99" Click="Button_Click_2"/>
+                    <Button Content="Bind" HorizontalAlignment="Left" Width="117" Margin="234,10,0,10" Click="Button_Click_1"/>
+                    <Button x:Name="btnStackpanel" Content="StackPanel" HorizontalAlignment="Left" Margin="462,10,0,10" Width="99" Click="BtnStackpanel_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Clientes">

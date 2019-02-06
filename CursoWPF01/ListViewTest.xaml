@@ -5,23 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursoWPF01"
         mc:Ignorable="d"
-        Title="Usando ListView" Height="429" Width="573">
-    <Grid HorizontalAlignment="Left" Width="565" Height="398" VerticalAlignment="Bottom">
+        Title="Usando ListView" Height="429" Width="573" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="81*"/>
+            <RowDefinition Height="246*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="301*"/>
+            <ColumnDefinition Width="264*"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="lvProdutos" Margin="5,10,275,10">
+        <ListView Name="lvProdutos" Margin="5,10,10,10" Grid.RowSpan="3">
             <!--<ListViewItem Content="teste"/>-->
         </ListView>
-        <Label Content="Digite o item a ser adicionado ao ListView" HorizontalAlignment="Left" Margin="309,16,0,0" VerticalAlignment="Top" Height="26" Width="232"/>
-        <TextBox x:Name="txbItem" HorizontalAlignment="Left" Height="23" Margin="309,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnInserir"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="309,70,0,0" Height="79" Click="BtnInserir_Click">
+        <Label Content="Digite o item a ser adicionado ao ListView" HorizontalAlignment="Left" Margin="9,16,0,0" VerticalAlignment="Top" Height="26" Width="232" Grid.Column="1"/>
+        <TextBox x:Name="txbItem" Margin="9,42,10,6" TextWrapping="Wrap" Grid.Column="1"/>
+        <Button x:Name="btnInserir"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Margin="9,6,0,0" Height="68" Click="BtnInserir_Click" Grid.Column="1" Grid.Row="1">
             <StackPanel>
                 <Image Source="imagens/Add48px.png" Height="37" Width="78" />
                 <TextBlock Margin="10" FontSize="12" HorizontalAlignment="Center">Inserir</TextBlock>
             </StackPanel>
         </Button>
-        <Button x:Name="btnExcluir"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="309,154,0,0" Height="86" Click="BtnExcluir_Click">
+        <Button x:Name="btnExcluir"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Margin="72,6,0,0" Height="68" Click="BtnExcluir_Click" Grid.Column="1" Grid.Row="1">
             <StackPanel>
                 <Image Source="imagens/Trash48px.png" Height="37" Width="78" />
                 <TextBlock Margin="10" FontSize="12" HorizontalAlignment="Center">Excluir</TextBlock>

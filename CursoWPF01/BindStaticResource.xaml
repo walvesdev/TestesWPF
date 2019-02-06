@@ -1,0 +1,22 @@
+﻿<Window x:Class="CursoWPF01.BindStaticResource"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CursoWPF01"
+        mc:Ignorable="d"
+        Title="BindStaticResource" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <local:Filme x:Key="filme01" Id="01" Nome="O Vento Levou" Ano="1954"/>
+    </Window.Resources>
+    <Grid>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Content="Código.:"/>
+        <Label Content="Nome do Filme.:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="154,10,0,0"/>
+        <Label Content="Ano de lançamento.:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="293,10,0,0"/>
+        
+        <TextBox x:Name="txbCodigo" Text="{Binding Source={StaticResource filme01}, Path=Id}" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbNome"   Text="{Binding Source={StaticResource filme01}, Path=Nome}" HorizontalAlignment="Left" Height="23" Margin="154,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbAno"    Text="{Binding Source={StaticResource filme01}, Path=Ano}" HorizontalAlignment="Left" Height="23" Margin="293,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

@@ -55,10 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BindStaticResource.xaml.cs">
+      <DependentUpon>BindStaticResource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Filme.cs" />
     <Compile Include="StackPanel.xaml.cs">
       <DependentUpon>StackPanel.xaml</DependentUpon>
     </Compile>
     <Page Include="Bind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BindStaticResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

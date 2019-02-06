@@ -19,6 +19,7 @@
                     <Button Content="DockPanel" HorizontalAlignment="Left" Margin="358,10,0,10" Width="99" Click="Button_Click_2"/>
                     <Button Content="Bind" HorizontalAlignment="Left" Width="117" Margin="234,10,0,10" Click="Button_Click_1"/>
                     <Button x:Name="btnStackpanel" Content="StackPanel" HorizontalAlignment="Left" Margin="462,10,0,10" Width="99" Click="BtnStackpanel_Click"/>
+                    <Button Content="BindStaticResource" HorizontalAlignment="Left" Margin="566,10,0,0" VerticalAlignment="Top" Width="110" Height="52" Click="Button_Click_4"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Clientes">

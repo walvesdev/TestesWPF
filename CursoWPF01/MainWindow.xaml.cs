@@ -23,6 +23,7 @@ namespace CursoWPF01
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
@@ -38,6 +39,17 @@ namespace CursoWPF01
         private void TxbTexto_TextChanged(object sender, TextChangedEventArgs e)
         {
             //btnBind.Content = txbTexto.Text;
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ListViewTest lvt = new ListViewTest();
+            lvt.ShowDialog();
         }
     }
 }

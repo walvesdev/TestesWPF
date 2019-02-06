@@ -1,0 +1,32 @@
+﻿<Window x:Class="CursoWPF01.ListViewTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CursoWPF01"
+        mc:Ignorable="d"
+        Title="Usando ListView" Height="429" Width="573">
+    <Grid HorizontalAlignment="Left" Width="565" Height="398" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView Name="lvProdutos" Margin="5,10,275,10">
+            <!--<ListViewItem Content="teste"/>-->
+        </ListView>
+        <Label Content="Digite o item a ser adicionado ao ListView" HorizontalAlignment="Left" Margin="309,16,0,0" VerticalAlignment="Top" Height="26" Width="232"/>
+        <TextBox x:Name="txbItem" HorizontalAlignment="Left" Height="23" Margin="309,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnInserir"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="309,70,0,0" Height="79" Click="BtnInserir_Click">
+            <StackPanel>
+                <Image Source="imagens/Add48px.png" Height="37" Width="78" />
+                <TextBlock Margin="10" FontSize="12" HorizontalAlignment="Center">Inserir</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnExcluir"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="309,154,0,0" Height="86" Click="BtnExcluir_Click">
+            <StackPanel>
+                <Image Source="imagens/Trash48px.png" Height="37" Width="78" />
+                <TextBlock Margin="10" FontSize="12" HorizontalAlignment="Center">Excluir</TextBlock>
+            </StackPanel>
+        </Button>
+
+    </Grid>
+</Window>

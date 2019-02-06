@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursoWPF01"
         mc:Ignorable="d"
-        Title="CursoWPF01" Height="629" Width="718">
+        Title="CursoWPF01" Height="879" Width="836">
     <Grid>
         <Label Content="Nome do Funcionaário.:&#xA;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.238,-4.032"/>
         <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="10,38,0,0"/>
@@ -42,7 +42,18 @@
             <Button Margin="10" Content="Preto"/>
             <Button Margin="10" Content="Com leite"/>
             <Button Margin="10" Content="Expresso"/>
-            <Button Margin="10"> Cappuchino</Button>
+            <Button Margin="10">Cappuchino</Button>
         </StackPanel>
+        <TabControl HorizontalAlignment="Left" Height="100" Margin="43,607,0,0" VerticalAlignment="Top" Width="600" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Inicio">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Mostrar ListView" Margin="10,10,479,10" Click="Button_Click"/>
+                    <Button Content="Button" Margin="120,10,400,10"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Clientes">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

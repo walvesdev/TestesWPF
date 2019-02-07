@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace CursoWPF01
 {
-    /// <summary>
-    /// Lógica interna para Agenda.xaml
-    /// </summary>
     public partial class AgendaXaml : Window
     {
         private string operacao;
@@ -148,93 +145,54 @@ namespace CursoWPF01
 
         private void DesabilitarCampos(String op)
         {
+            btnInserir.IsEnabled = false;
+            btnLocalizar.IsEnabled = false;
+            btnAlterar.IsEnabled = false;
+            btnSalvar.IsEnabled = false;
+            btnCancelar.IsEnabled = false;
+            btnExcluir.IsEnabled = false;
+            txbID.IsEnabled = false;
+            txbNome.IsEnabled = false;
+            txbEmail.IsEnabled = false;
+            txbTelefone.IsEnabled = false;
+            txbPesquisa.IsEnabled = false;
+            btnPesquisar.IsEnabled = false;
+
             switch (op)
             {
                 case "inicio":
                     btnInserir.IsEnabled = true;
-                    btnLocalizar.IsEnabled = true;
-                    btnSalvar.IsEnabled = false;
-                    btnAlterar.IsEnabled = false;
-                    btnCancelar.IsEnabled = false;
-                    btnExcluir.IsEnabled = false;
-                    txbID.IsEnabled = false;
-                    txbNome.IsEnabled = false;
-                    txbEmail.IsEnabled = false;
-                    txbTelefone.IsEnabled = false;
-                    txbPesquisa.IsEnabled = false;
-                    btnPesquisar.IsEnabled = false;
+                    btnLocalizar.IsEnabled = true;                    
                     break;
-                case "alterar":
-                    btnInserir.IsEnabled = false;
-                    btnLocalizar.IsEnabled = false;
-                    btnAlterar.IsEnabled = false;
+                case "alterar":                    
                     btnSalvar.IsEnabled = true;
-                    btnCancelar.IsEnabled = true;
-                    btnExcluir.IsEnabled = false;
-                    txbID.IsEnabled = false;
+                    btnCancelar.IsEnabled = true;                    
                     txbNome.IsEnabled = true;
                     txbEmail.IsEnabled = true;
-                    txbTelefone.IsEnabled = true;
-                    txbPesquisa.IsEnabled = false;
-                    btnPesquisar.IsEnabled = false;
+                    txbTelefone.IsEnabled = true;                    
                     operacao = "alterar";
                     break;
-                case "pesquisa":
-                    btnInserir.IsEnabled = false;
-                    btnLocalizar.IsEnabled = false;
-                    btnAlterar.IsEnabled = false;
-                    btnSalvar.IsEnabled = false;
+                case "pesquisa":                   
                     btnCancelar.IsEnabled = true;
-                    btnExcluir.IsEnabled = false;
-                    txbID.IsEnabled = false;
-                    txbNome.IsEnabled = false;
-                    txbEmail.IsEnabled = false;
-                    txbTelefone.IsEnabled = false;
                     txbPesquisa.IsEnabled = true;
                     btnPesquisar.IsEnabled = true;
                     break;
-                case "inserir":
-                    btnLocalizar.IsEnabled = false;
-                    btnAlterar.IsEnabled = false;
+                case "inserir":                   
                     btnSalvar.IsEnabled = true;
-                    btnCancelar.IsEnabled = true;
-                    btnExcluir.IsEnabled = false;
-                    txbID.IsEnabled = false;
+                    btnCancelar.IsEnabled = true;                   
                     txbNome.IsEnabled = true;
                     txbEmail.IsEnabled = true;
                     txbTelefone.IsEnabled = true;
-                    txbPesquisa.IsEnabled = false;
-                    btnPesquisar.IsEnabled = false;
                     operacao = "inserir";
                     break;
                 case "cancelar":
                     btnInserir.IsEnabled = true;
                     btnLocalizar.IsEnabled = true;
-                    btnAlterar.IsEnabled = false;
-                    btnSalvar.IsEnabled = false;
-                    btnCancelar.IsEnabled = false;
-                    btnExcluir.IsEnabled = false;
-                    txbID.IsEnabled = false;
-                    txbNome.IsEnabled = false;
-                    txbEmail.IsEnabled = false;
-                    txbTelefone.IsEnabled = false;
-                    txbPesquisa.IsEnabled = false;
-                    btnPesquisar.IsEnabled = false;
                     operacao = "";
                     break;
                 case "linhaDgv":
-                    btnInserir.IsEnabled = false;
-                    btnLocalizar.IsEnabled = false;
-                    btnAlterar.IsEnabled = true;
-                    btnSalvar.IsEnabled = false;
-                    btnCancelar.IsEnabled = true;
-                    btnExcluir.IsEnabled = false;
-                    txbID.IsEnabled = false;
-                    txbNome.IsEnabled = false;
-                    txbEmail.IsEnabled = false;
-                    txbTelefone.IsEnabled = false;
-                    txbPesquisa.IsEnabled = false;
-                    btnPesquisar.IsEnabled = false;
+                    btnAlterar.IsEnabled = true;                    
+                    btnCancelar.IsEnabled = true;                   
                     break;
 
 

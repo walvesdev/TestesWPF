@@ -53,7 +53,7 @@ namespace CursoWPF01
                             PreencherDataGridView();
                             DesabilitarCampos("inserir");
                         }
-                       
+
 
                     }
                     catch (Exception ex)
@@ -93,10 +93,11 @@ namespace CursoWPF01
 
         private void TxbCancelar_Click(object sender, RoutedEventArgs e)
         {
-           
+
             LimparCampos();
             DesabilitarCampos("cancelar");
-            
+            PreencherDataGridView();
+
 
         }
 
@@ -106,14 +107,15 @@ namespace CursoWPF01
             txbNome.Text = "";
             txbEmail.Text = "";
             txbTelefone.Text = "";
+            txbPesquisa.Text = "";
         }
 
-        private  void TxbLocalizar_Click(object sender, RoutedEventArgs e)
+        private void TxbLocalizar_Click(object sender, RoutedEventArgs e)
         {
             DesabilitarCampos("pesquisa");
             txbPesquisa.Focus();
-            
-                
+
+
         }
 
         private void TxbInserir_Click(object sender, RoutedEventArgs e)
@@ -121,7 +123,7 @@ namespace CursoWPF01
             this.operacao = "inserir";
             DesabilitarCampos("inserir");
             txbNome.Focus();
-        }       
+        }
 
         private void TxbAlterar_Click(object sender, RoutedEventArgs e)
         {
@@ -162,24 +164,25 @@ namespace CursoWPF01
             {
                 case "inicio":
                     btnInserir.IsEnabled = true;
-                    btnLocalizar.IsEnabled = true;                    
+                    btnLocalizar.IsEnabled = true;
                     break;
-                case "alterar":                    
+                case "alterar":
                     btnSalvar.IsEnabled = true;
-                    btnCancelar.IsEnabled = true;                    
+                    btnCancelar.IsEnabled = true;
                     txbNome.IsEnabled = true;
                     txbEmail.IsEnabled = true;
-                    txbTelefone.IsEnabled = true;                    
+                    txbTelefone.IsEnabled = true;
                     operacao = "alterar";
                     break;
-                case "pesquisa":                   
+                case "pesquisa":
+                    txbID.IsEnabled = true;
                     btnCancelar.IsEnabled = true;
                     txbPesquisa.IsEnabled = true;
                     btnPesquisar.IsEnabled = true;
                     break;
-                case "inserir":                   
+                case "inserir":
                     btnSalvar.IsEnabled = true;
-                    btnCancelar.IsEnabled = true;                   
+                    btnCancelar.IsEnabled = true;
                     txbNome.IsEnabled = true;
                     txbEmail.IsEnabled = true;
                     txbTelefone.IsEnabled = true;
@@ -191,8 +194,11 @@ namespace CursoWPF01
                     operacao = "";
                     break;
                 case "linhaDgv":
-                    btnAlterar.IsEnabled = true;                    
-                    btnCancelar.IsEnabled = true;                   
+                    btnAlterar.IsEnabled = true;
+                    btnCancelar.IsEnabled = true;
+                    btnPesquisar.IsEnabled = true;
+                    txbPesquisa.IsEnabled = true;
+                    btnExcluir.IsEnabled = true;
                     break;
 
 
@@ -243,7 +249,48 @@ namespace CursoWPF01
 
                     dgvContatos.ItemsSource = await banco.PesquisaPorNome(contato.Nome.Trim());
                     dgvContatos.Items.Refresh();
+                    LimparCampos();
                 }
+            }
+        }
+
+        private void TxbID_TouchEnter(object sender, TouchEventArgs e)
+        {
+
+        }
+
+        private void TxbID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                try
+                {
+                    using (ContatoDao banco = new ContatoDao())
+                    {
+                        Contato contato = banco.PesquisarPorId(Convert.ToInt32(txbID.Text));
+                        if (contato != null)
+                        {
+                            List<Contato> contatos = new List<Contato>();
+                            contatos.Add(contato);
+
+                            dgvContatos.ItemsSource = contatos;
+                            dgvContatos.Items.Refresh();
+                            LimparCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("ID não encontrado");
+                        }
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Digite um ID Válido!");
+
+                }
+                   
+                
             }
         }
     }

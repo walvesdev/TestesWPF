@@ -22,6 +22,26 @@ namespace CursoWPF01
         public BindStaticResource()
         {
             InitializeComponent();
+
+            Filme filme = new Filme
+            {
+                Id = 02,
+                Nome = "Os Trapalhoes",
+                Ano = 1990
+            };
+
+            Binding bdFilme = new Binding()
+            {
+                Source = filme
+                
+            };
+            bdFilme.Path = new PropertyPath("Id");
+            bdFilme.Path = new PropertyPath("Nome");
+            bdFilme.Path = new PropertyPath("Ano");
+
+            txbCodigo_Copy.SetBinding(TextBox.TextProperty, bdFilme);
+            txbNome_Copy.SetBinding(TextBox.TextProperty, bdFilme);
+            txbAno_Copy.SetBinding(TextBox.TextProperty, bdFilme);
         }
     }
 }

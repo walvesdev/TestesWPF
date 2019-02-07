@@ -70,5 +70,11 @@ namespace CursoWPF01
             BindStaticResource bindStaticResource = new BindStaticResource();
             bindStaticResource.ShowDialog();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            AgendaXaml agendaXaml = new AgendaXaml();
+            agendaXaml.ShowDialog();
+        }
     }
 }

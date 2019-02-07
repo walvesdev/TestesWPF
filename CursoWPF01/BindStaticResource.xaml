@@ -9,14 +9,28 @@
     <Window.Resources>
         <local:Filme x:Key="filme01" Id="01" Nome="O Vento Levou" Ano="1954"/>
     </Window.Resources>
+    <!--primeira foram Binding resourse-->
     <Grid>
         <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Content="Código.:"/>
         <Label Content="Nome do Filme.:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="154,10,0,0"/>
         <Label Content="Ano de lançamento.:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="293,10,0,0"/>
-        
+
         <TextBox x:Name="txbCodigo" Text="{Binding Source={StaticResource filme01}, Path=Id}" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txbNome"   Text="{Binding Source={StaticResource filme01}, Path=Nome}" HorizontalAlignment="Left" Height="23" Margin="154,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txbAno"    Text="{Binding Source={StaticResource filme01}, Path=Ano}" HorizontalAlignment="Left" Height="23" Margin="293,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+      
+        <!--Segunda foram Binding resourse-->
+        <StackPanel HorizontalAlignment="Left" Height="256" Margin="10,90,0,0" VerticalAlignment="Top" Width="774">
+            <StackPanel.DataContext>
+                <Binding Source="{StaticResource filme01}"/>
+            </StackPanel.DataContext>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Código.:"/>
+            <TextBox x:Name="txbCodigo_Copy" Text="{Binding Id}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nome do Filme.:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="txbNome_Copy"   Text="{Binding Nome}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Ano de lançamento.:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="txbAno_Copy"    Text="{Binding Ano}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </StackPanel>
 
     </Grid>
 </Window>

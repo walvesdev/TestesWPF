@@ -15,7 +15,7 @@
         <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="10,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544"/>
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="10,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544"/>
-        <DataGrid HorizontalAlignment="Left" Height="313" Margin="10,248,0,0" VerticalAlignment="Top" Width="774"/>
+        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="313" Margin="10,248,0,0" VerticalAlignment="Top" Width="774"/>
         <Button x:Name="txbInserir" Content="Inserir" HorizontalAlignment="Left" Margin="159,43,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="txbAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="239,43,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="txbLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="319,43,0,0" VerticalAlignment="Top" Width="75"/>

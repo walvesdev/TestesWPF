@@ -144,17 +144,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AgendaContext.cs" />
-    <Compile Include="ContatoDao.cs" />
-    <Compile Include="AgendaXaml.xaml.cs">
+    <Compile Include="AcessoDados\AgendaContext.cs" />
+    <Compile Include="AcessoDados\ContatoDao.cs" />
+    <Compile Include="View\AgendaXaml.xaml.cs">
       <DependentUpon>AgendaXaml.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BindStaticResource.xaml.cs">
+    <Compile Include="View\BindStaticResource.xaml.cs">
       <DependentUpon>BindStaticResource.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Contato.cs" />
-    <Compile Include="Filme.cs" />
-    <Compile Include="IAgendaDao.cs" />
+    <Compile Include="Model\Contato.cs" />
+    <Compile Include="Model\Filme.cs" />
+    <Compile Include="AcessoDados\IAgendaDao.cs" />
     <Compile Include="Migrations\20190207151909_Inicial.cs" />
     <Compile Include="Migrations\20190207151909_Inicial.designer.cs">
       <DependentUpon>20190207151909_Inicial.cs</DependentUpon>
@@ -164,30 +164,30 @@
       <DependentUpon>20190207152748_Contato.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AgendaContextModelSnapshot.cs" />
-    <Compile Include="StackPanel.xaml.cs">
+    <Compile Include="View\StackPanel.xaml.cs">
       <DependentUpon>StackPanel.xaml</DependentUpon>
     </Compile>
-    <Page Include="AgendaXaml.xaml">
+    <Page Include="View\AgendaXaml.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Bind.xaml">
+    <Page Include="View\Bind.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BindStaticResource.xaml">
+    <Page Include="View\BindStaticResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CalculoSalario.xaml">
+    <Page Include="View\CalculoSalario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DockPanel.xaml">
+    <Page Include="View\DockPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ListViewTest.xaml">
+    <Page Include="View\ListViewTest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,23 +199,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Bind.xaml.cs">
+    <Compile Include="View\Bind.xaml.cs">
       <DependentUpon>Bind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CalculoSalario.xaml.cs">
+    <Compile Include="View\CalculoSalario.xaml.cs">
       <DependentUpon>CalculoSalario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DockPanel.xaml.cs">
+    <Compile Include="View\DockPanel.xaml.cs">
       <DependentUpon>DockPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListViewTest.xaml.cs">
+    <Compile Include="View\ListViewTest.xaml.cs">
       <DependentUpon>ListViewTest.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StackPanel.xaml">
+    <Page Include="View\StackPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -5,22 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursoWPF01"
         mc:Ignorable="d"
-        Title="Agenda" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        Title="Agenda" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Label Content="ID" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbID" HorizontalAlignment="Left" Height="23" Margin="10,43,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txbID" HorizontalAlignment="Left" Height="23" Margin="10,43,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label Content="Nome" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" Margin="10,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544"/>
+        <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" Margin="10,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="263"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="10,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544"/>
+        <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="10,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="10,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="544"/>
-        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="313" Margin="10,248,0,0" VerticalAlignment="Top" Width="774"/>
-        <Button x:Name="txbInserir" Content="Inserir" HorizontalAlignment="Left" Margin="159,43,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="txbAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="239,43,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="txbLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="319,43,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="txbSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="399,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbSalvar_Click"/>
-        <Button x:Name="txbCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="479,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbCancelar_Click"/>
+        <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="10,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
+        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="313" Margin="10,248,0,0" VerticalAlignment="Top" Width="774" SelectedCellsChanged="DgvContatos_SelectedCellsChanged"/>
+        <Button x:Name="btnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="159,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbInserir_Click"/>
+        <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="239,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbAlterar_Click"/>
+        <Button x:Name="btnLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="319,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbLocalizar_Click"/>
+        <Button x:Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="399,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbSalvar_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="479,43,0,0" VerticalAlignment="Top" Width="75" Click="TxbCancelar_Click"/>
+        <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="559,43,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click"/>
+        <Label Content="Pesquisa.:" HorizontalAlignment="Left" Margin="278,101,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbPesquisa" HorizontalAlignment="Left" Height="23" Margin="344,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="231"/>
+        <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="580,101,0,0" VerticalAlignment="Top" Width="54" Height="23" Click="BtnPesquisar_Click"/>
 
     </Grid>
 </Window>

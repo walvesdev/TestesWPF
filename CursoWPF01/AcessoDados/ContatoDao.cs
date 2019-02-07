@@ -14,9 +14,12 @@ namespace CursoWPF01
             this.banco = new AgendaContext();
         }
         
-        public IList<Contato> ListarTodos()
+        public Task<List<Contato>> ListarTodos()
         {
-            return banco.Contatos.ToList();
+            return Task.Run(() =>
+            {
+                return banco.Contatos.ToList();
+            });
         }
        
 
@@ -45,6 +48,12 @@ namespace CursoWPF01
         public void Dispose()
         {
             banco.Dispose();
+        }
+        public Task<List<Contato>> PesquisaPorNome(string nome)
+        {
+            return Task.Run(() => {
+                return banco.Contatos.Where(c => c.Nome.Contains(nome.Trim())).ToList();
+            });
         }
     }
 }

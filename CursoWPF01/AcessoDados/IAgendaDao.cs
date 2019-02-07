@@ -11,7 +11,7 @@ namespace CursoWPF01
         void Inserir(T obj);
         void Alterar(T obj);
         void Excluir(T obj);
-        IList<T> ListarTodos();
+        Task<List<T>> ListarTodos();
         T PesquisarPorId(int id);
 
     }

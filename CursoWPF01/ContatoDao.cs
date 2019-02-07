@@ -11,7 +11,7 @@ namespace CursoWPF01
         AgendaContext banco;
         public ContatoDao()
         {
-            banco = new AgendaContext();
+            this.banco = new AgendaContext();
         }
         
         public IList<Contato> ListarTodos()

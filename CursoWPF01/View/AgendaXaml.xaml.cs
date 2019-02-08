@@ -26,9 +26,10 @@ namespace CursoWPF01
         private async void PreencherDataGridView()
         {
             using (ContatoDao banco = new ContatoDao())
-            {
+            {                
                 dgvContatos.ItemsSource = await banco.ListarTodos();
                 dgvContatos.Items.Refresh();
+                lblQtdContatos.Content = banco.ContarContatos();
             }
         }
 
@@ -252,11 +253,6 @@ namespace CursoWPF01
                     LimparCampos();
                 }
             }
-        }
-
-        private void TxbID_TouchEnter(object sender, TouchEventArgs e)
-        {
-
         }
 
         private void TxbID_KeyDown(object sender, KeyEventArgs e)

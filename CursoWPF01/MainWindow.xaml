@@ -1,11 +1,18 @@
 ﻿<Window x:Class="CursoWPF01.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CursoWPF01"
-        mc:Ignorable="d"
-        Title="CursoWPF01" Height="484" Width="838" HorizontalAlignment="Center" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+             Title="CursoWPF01" Height="484" Width="838" HorizontalAlignment="Center" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid HorizontalAlignment="Right" Width="828">
         <Grid.RowDefinitions>
             <RowDefinition Height="116*"/>
@@ -13,19 +20,212 @@
         </Grid.RowDefinitions>
         <TabControl HorizontalAlignment="Left" Height="100" Margin="6,8,0,0" VerticalAlignment="Top" Width="812" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Inicio">
-                <Grid Background="#FFE5E5E5" HorizontalAlignment="Right" Width="806">
-                    <Button Content="Mostrar ListView" Margin="10,10,691,10" Click="Button_Click"/>
-                    <Button Content="Calculo Funcionario" Margin="120,10,577,10" Click="Button_Click_3"/>
-                    <Button Content="DockPanel" HorizontalAlignment="Left" Margin="358,10,0,10" Width="99" Click="Button_Click_2"/>
-                    <Button Content="Bind" HorizontalAlignment="Left" Width="117" Margin="234,10,0,10" Click="Button_Click_1"/>
-                    <Button x:Name="btnStackpanel" Content="StackPanel" HorizontalAlignment="Left" Margin="462,10,0,10" Width="99" Click="BtnStackpanel_Click"/>
-                    <Button Content="BindStaticResource" HorizontalAlignment="Left" Margin="566,10,0,0" VerticalAlignment="Top" Width="110" Height="52" Click="Button_Click_4"/>
-                    <Button x:Name="btnAgenda" Content="Agenda" HorizontalAlignment="Left" Margin="681,10,0,0" VerticalAlignment="Top" Width="115" Height="52" Click="Button_Click_5"/>
+                <Grid Background="#eee" HorizontalAlignment="Right" Width="806">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="79*"/>
+                        <ColumnDefinition Width="727*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Mostrar ListView" Margin="10,10,691,10" Click="Button_Click" Grid.ColumnSpan="2" Height="Auto"/>
+                    <Button Content="Calculo Funcionario" Margin="41,10,577,10" Click="Button_Click_3" Grid.Column="1" Height="Auto"/>
+                    <Button Content="DockPanel" HorizontalAlignment="Left" Margin="279,10,0,10" Width="99" Click="Button_Click_2" Grid.Column="1" Height="Auto"/>
+                    <Button Content="Bind" HorizontalAlignment="Left" Width="117" Margin="155,10,0,10" Click="Button_Click_1" Grid.Column="1" Height="Auto"/>
+                    <Button x:Name="btnStackpanel" Content="StackPanel" HorizontalAlignment="Left" Margin="383,10,0,10" Width="99" Click="BtnStackpanel_Click" Grid.Column="1" Height="Auto"/>
+                    <Button Content="BindStaticResource" HorizontalAlignment="Left" Margin="487,10,0,0" VerticalAlignment="Top" Width="110" Height="52" Click="Button_Click_4" Grid.Column="1"/>
+                    <Button x:Name="btnAgenda" Content="Agenda" HorizontalAlignment="Left" Margin="602,10,0,0" VerticalAlignment="Top" Width="115" Height="52" Click="Button_Click_5" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Clientes">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
+        <Menu IsMainMenu="True" Margin="6,122,-6,99" Grid.Row="1">
+            <MenuItem Header="_File">
+                <MenuItem Header="Save">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentSave" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Save As.." />
+                <MenuItem Header="Exit" InputGestureText="Ctrl+E">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ExitToApp" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Excellent" IsCheckable="True" IsChecked="True" />
+                <MenuItem Header="Rubbish" IsCheckable="True" />
+                <MenuItem Header="Dig Deeper" InputGestureText="Ctrl+D">
+                    <MenuItem Header="Enlightenment?" IsCheckable="True" />
+                    <MenuItem Header="Disappointment" IsCheckable="True" />
+                </MenuItem>
+                <MenuItem Header="Look Deeper" InputGestureText="Ctrl+D">
+                    <MenuItem Header="Plain" />
+                    <MenuItem Header="Ice Cream" />
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Cut" Command="Cut">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentCut" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Copy" Command="Copy">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentCopy" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Paste" Command="Paste">
+                    <MenuItem.Icon>
+                        <materialDesign:PackIcon Kind="ContentPaste" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Margin="0,0,0,221" Grid.Row="1">
+            <ToolBar Style="{DynamicResource MaterialDesignToolBar}"
+    ClipToBounds="False" Margin="10,51,-10,-51">
+                <Button
+      ToolTip="Follow me on Twitter">
+                    <materialDesign:PackIcon Kind="TwitterBox" />
+                </Button>
+                <Button
+      ToolTip="Save">
+                    <materialDesign:PackIcon
+        Kind="ContentSave" />
+                </Button>
+                <Separator />
+                <Button
+      Command="Cut"
+      ToolTip="Cut"
+      ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon
+        Kind="ContentCut" />
+                </Button>
+                <Button
+      Command="Copy"
+      ToolTip="Copy that stuff"
+      ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon
+        Kind="ContentCopy" />
+                </Button>
+                <Separator />
+                <Button
+      Command="Paste"
+      ToolTip="Paste some stuff"
+      ToolBar.OverflowMode="AsNeeded">
+                    <materialDesign:PackIcon
+        Kind="ContentPaste" />
+                </Button>
+                <!-- when badging in a toolbar, make sure the parent ToolBar.ClipToBounds="False", and 
+                   manually apply the button style -->
+                <materialDesign:Badged
+      ToolBar.OverflowMode="AsNeeded"
+      Badge="{materialDesign:PackIcon Alert}">
+                    <Button
+        ToolTip="Badge it up!"
+        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                        <materialDesign:PackIcon
+          Kind="AirplaneTakeoff" />
+                    </Button>
+                </materialDesign:Badged>
+                <Separator />
+                <ListBox>
+                    <ListBoxItem
+        ToolTip="This is a lonley toggle with TextBlock instead of icon">
+                        <TextBlock>
+        W
+                        </TextBlock>
+                    </ListBoxItem>
+                </ListBox>
+                <Separator />
+                <ListBox
+      SelectedIndex="0">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock
+            Text="MaterialDesignToolToggleFlatListBox" />
+                            <TextBlock
+            Text="Exclusive selection" />
+                            <TextBlock
+            Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon
+          Kind="FormatAlignLeft" />
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon
+          Kind="FormatAlignCenter" />
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon
+          Kind="FormatAlignRight" />
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon
+          Kind="FormatAlignJustify" />
+                    </ListBoxItem>
+                </ListBox>
+                <Separator />
+                <ListBox
+      SelectionMode="Extended">
+                    <ListBox.ToolTip>
+                        <StackPanel>
+                            <TextBlock
+            Text="MaterialDesignToolToggleListBox" />
+                            <TextBlock
+            Text="Multiple selection" />
+                            <TextBlock
+            Text="ListBoxAssist.IsToggle allows more natural toggle behaviour" />
+                        </StackPanel>
+                    </ListBox.ToolTip>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon
+          Kind="FormatBold" />
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <materialDesign:PackIcon
+          Kind="FormatItalic" />
+                    </ListBoxItem>
+                    <ListBoxItem
+        x:Name="UnderlineCheckbox">
+                        <materialDesign:PackIcon
+          Kind="FormatUnderline" />
+                    </ListBoxItem>
+                </ListBox>
+                <Separator />
+                <Label
+      Content="Font size:"
+      VerticalAlignment="Center" />
+                <ComboBox>
+                    <ComboBoxItem
+        Content="10" />
+                    <ComboBoxItem
+        IsSelected="True"
+        Content="12" />
+                    <ComboBoxItem
+        Content="14" />
+                    <ComboBoxItem
+        Content="16" />
+                </ComboBox>
+                <CheckBox>
+                    Check
+                </CheckBox>
+                <Button
+      ToolTip="Take a nap"
+      ToolBar.OverflowMode="Always">
+                    <materialDesign:PackIcon
+        Kind="Hotel" />
+                </Button>
+                <RadioButton
+      GroupName="XXX"
+      Content="Radio" />
+                <RadioButton
+      GroupName="XXX"
+      Content="Ga Ga" />
+                <ToggleButton />
+            </ToolBar>
+        </ToolBarTray>
     </Grid>
 </Window>

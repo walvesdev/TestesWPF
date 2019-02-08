@@ -52,8 +52,12 @@ namespace CursoWPF01
         public Task<List<Contato>> PesquisaPorNome(string nome)
         {
             return Task.Run(() => {
-                return banco.Contatos.Where(c => c.Nome.Contains(nome.Trim())).ToList();
+                return banco.Contatos.Where(c => c.Nome.Contains(nome.Trim())).AsParallel().ToList();
             });
+        }
+        public int ContarContatos()
+        {
+            return banco.Contatos.Count();
         }
     }
 }

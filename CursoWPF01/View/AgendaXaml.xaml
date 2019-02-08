@@ -9,14 +9,14 @@
         Title="Agenda" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Label Content="ID" HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
-        <TextBox x:Name="txbID" KeyDown="TxbID_KeyDown" HorizontalAlignment="Left" Height="23" Margin="78,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False" />
+        <TextBox x:Name="txbID" KeyDown="TxbID_KeyDown" HorizontalAlignment="Left" Height="23" Margin="78,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="144" IsEnabled="False" FontFamily="Verdana" FontSize="14" />
         <Label Content="Nome" HorizontalAlignment="Left" Margin="78,69,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
-        <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" Margin="78,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="263"/>
+        <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" Margin="78,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="263" FontFamily="Verdana" FontSize="14"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="78,128,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
-        <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="78,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
+        <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="78,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624" FontFamily="Verdana" FontSize="14"/>
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="78,187,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
-        <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="78,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
-        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="272" Margin="78,248,0,0" VerticalAlignment="Top" Width="624" SelectedCellsChanged="DgvContatos_SelectedCellsChanged" IsReadOnly="True" FontFamily="Verdana" FontSize="14"/>
+        <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="78,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624" FontFamily="Verdana" FontSize="14"/>
+        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="272" Margin="78,248,0,0" VerticalAlignment="Top" Width="624" IsReadOnly="True" FontFamily="Verdana" FontSize="14" Focusable="False" MouseLeftButtonUp="DgvContatos_MouseLeftButtonUp"/>
         <Button x:Name="btnInserir" Style="{StaticResource MaterialDesignRaisedLightButton}"
                 Content="{materialDesign:PackIcon AddToPhotos}" HorizontalAlignment="Left" 
                 Margin="227,10,0,0" VerticalAlignment="Top" Width="75" Click="TxbInserir_Click" ToolTip="Adicionar Contato" Height="49"/>
@@ -37,14 +37,13 @@
         <Button x:Name="btnExcluir" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="627,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click" ToolTip="Excluir  Contato Selecionado." Height="49">
             <materialDesign:PackIcon Kind="Delete" />
         </Button>
-        <Label Content="Pesquisa" HorizontalAlignment="Left" Margin="363,64,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14" RenderTransformOrigin="0.581,-0.309"/>
-        <TextBox x:Name="txbPesquisa" HorizontalAlignment="Left" Height="23" Margin="363,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="259"/>
+        <Label Content="Pesquisa" HorizontalAlignment="Left" Margin="346,64,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14" RenderTransformOrigin="0.581,-0.309"/>
+        <TextBox x:Name="txbPesquisa" HorizontalAlignment="Left" Height="23" Margin="346,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" FontFamily="Verdana" FontSize="14"/>
         <Button x:Name="btnPesquisar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="627,69,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="BtnPesquisar_Click">
             <materialDesign:PackIcon Kind="Search" />
         </Button>
         <Label Content="Qntd. contatos cadastrados: " HorizontalAlignment="Left" Margin="78,525,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,-0.128" FontFamily="Verdana" FontSize="14"/>
         <Label x:Name="lblQtdContatos" Content="0" HorizontalAlignment="Left" Margin="283,525,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
-        <TreeView HorizontalAlignment="Left" Height="100" Margin="784,100,-90,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

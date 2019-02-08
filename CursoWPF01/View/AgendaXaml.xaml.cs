@@ -52,7 +52,7 @@ namespace CursoWPF01
 
                             LimparCampos();
                             PreencherDataGridView();
-                            DesabilitarCampos("inserir");
+                           DesabilitarCampos("inicio");
                         }
 
 
@@ -79,7 +79,7 @@ namespace CursoWPF01
 
                             LimparCampos();
                             PreencherDataGridView();
-                            DesabilitarCampos("alterar");
+                           DesabilitarCampos("inicio");
                         }
 
                     }
@@ -173,7 +173,6 @@ namespace CursoWPF01
                     txbNome.IsEnabled = true;
                     txbEmail.IsEnabled = true;
                     txbTelefone.IsEnabled = true;
-                    operacao = "alterar";
                     break;
                 case "pesquisa":
                     txbID.IsEnabled = true;
@@ -187,7 +186,6 @@ namespace CursoWPF01
                     txbNome.IsEnabled = true;
                     txbEmail.IsEnabled = true;
                     txbTelefone.IsEnabled = true;
-                    operacao = "inserir";
                     break;
                 case "cancelar":
                     btnInserir.IsEnabled = true;
@@ -229,11 +227,6 @@ namespace CursoWPF01
             }
 
 
-        }
-
-        private void DgvContatos_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
-        {
-            DesabilitarCampos("linhaDgv");
         }
 
         private async void BtnPesquisar_Click(object sender, RoutedEventArgs e)
@@ -288,6 +281,11 @@ namespace CursoWPF01
                    
                 
             }
+        }
+
+        private void DgvContatos_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            DesabilitarCampos("linhaDgv");
         }
     }
 }

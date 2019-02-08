@@ -16,7 +16,7 @@
         <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="78,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
         <Label Content="Telefone" HorizontalAlignment="Left" Margin="78,187,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="78,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
-        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="272" Margin="78,248,0,0" VerticalAlignment="Top" Width="624" SelectedCellsChanged="DgvContatos_SelectedCellsChanged" IsReadOnly="True" FontFamily="Arial" FontSize="14"/>
+        <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="272" Margin="78,248,0,0" VerticalAlignment="Top" Width="624" SelectedCellsChanged="DgvContatos_SelectedCellsChanged" IsReadOnly="True" FontFamily="Verdana" FontSize="14"/>
         <Button x:Name="btnInserir" Style="{StaticResource MaterialDesignRaisedLightButton}"
                 Content="{materialDesign:PackIcon AddToPhotos}" HorizontalAlignment="Left" 
                 Margin="227,41,0,0" VerticalAlignment="Top" Width="75" Click="TxbInserir_Click" ToolTip="Adicionar Contato"/>

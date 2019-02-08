@@ -8,42 +8,42 @@
         mc:Ignorable="d"
         Title="Agenda" Height="600" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="78,10,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
         <TextBox x:Name="txbID" KeyDown="TxbID_KeyDown" HorizontalAlignment="Left" Height="23" Margin="78,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False" />
-        <Label Content="Nome" HorizontalAlignment="Left" Margin="78,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="78,69,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
         <TextBox x:Name="txbNome" HorizontalAlignment="Left" Height="23" Margin="78,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="263"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="78,128,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="78,128,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
         <TextBox x:Name="txbEmail" HorizontalAlignment="Left" Height="23" Margin="78,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
-        <Label Content="Telefone" HorizontalAlignment="Left" Margin="78,187,0,0" VerticalAlignment="Top"/>
+        <Label Content="Telefone" HorizontalAlignment="Left" Margin="78,187,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
         <TextBox x:Name="txbTelefone" HorizontalAlignment="Left" Height="23" Margin="78,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="624"/>
         <DataGrid x:Name="dgvContatos" HorizontalAlignment="Left" Height="272" Margin="78,248,0,0" VerticalAlignment="Top" Width="624" SelectedCellsChanged="DgvContatos_SelectedCellsChanged" IsReadOnly="True" FontFamily="Verdana" FontSize="14"/>
         <Button x:Name="btnInserir" Style="{StaticResource MaterialDesignRaisedLightButton}"
                 Content="{materialDesign:PackIcon AddToPhotos}" HorizontalAlignment="Left" 
-                Margin="227,41,0,0" VerticalAlignment="Top" Width="75" Click="TxbInserir_Click" ToolTip="Adicionar Contato"/>
+                Margin="227,10,0,0" VerticalAlignment="Top" Width="75" Click="TxbInserir_Click" ToolTip="Adicionar Contato" Height="49"/>
         <Button x:Name="btnAlterar"  Style="{StaticResource MaterialDesignRaisedLightButton}"
-                HorizontalAlignment="Left" Margin="307,41,0,0" 
-                VerticalAlignment="Top" Width="75" Click="TxbAlterar_Click" ToolTip="Atualizar  Contato">
+                HorizontalAlignment="Left" Margin="307,10,0,0" 
+                VerticalAlignment="Top" Width="75" Click="TxbAlterar_Click" ToolTip="Atualizar  Contato" Height="49">
             <materialDesign:PackIcon Kind="Update" />
         </Button>
-        <Button x:Name="btnLocalizar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="387,41,0,0" VerticalAlignment="Top" Width="75" Click="TxbLocalizar_Click" ToolTip="Localizar  Contato">
+        <Button x:Name="btnLocalizar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="387,10,0,0" VerticalAlignment="Top" Width="75" Click="TxbLocalizar_Click" ToolTip="Localizar  Contato" Height="49">
             <materialDesign:PackIcon Kind="FindInPage" />
         </Button>
-        <Button x:Name="btnSalvar"  Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="467,41,0,0" VerticalAlignment="Top" Width="75" Click="TxbSalvar_Click" ToolTip="Salvar  Contato">
+        <Button x:Name="btnSalvar"  Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="467,10,0,0" VerticalAlignment="Top" Width="75" Click="TxbSalvar_Click" ToolTip="Salvar  Contato" Height="49">
             <materialDesign:PackIcon Kind="ContentSave" />
         </Button>
-        <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="547,41,0,0" VerticalAlignment="Top" Width="75" Click="TxbCancelar_Click" ToolTip="Cancelar Operação">
+        <Button x:Name="btnCancelar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="547,10,0,0" VerticalAlignment="Top" Width="75" Click="TxbCancelar_Click" ToolTip="Cancelar Operação" Height="49">
             <materialDesign:PackIcon Kind="Cancel" />
         </Button>
-        <Button x:Name="btnExcluir" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="627,41,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click" ToolTip="Excluir  Contato Selecionado.">
+        <Button x:Name="btnExcluir" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="627,10,0,0" VerticalAlignment="Top" Width="75" Click="BtnExcluir_Click" ToolTip="Excluir  Contato Selecionado." Height="49">
             <materialDesign:PackIcon Kind="Delete" />
         </Button>
-        <Label Content="Pesquisa.:" HorizontalAlignment="Left" Margin="346,99,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbPesquisa" HorizontalAlignment="Left" Height="23" Margin="412,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
-        <Button x:Name="btnPesquisar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="609,89,0,0" VerticalAlignment="Top" Width="93" Height="33" Click="BtnPesquisar_Click">
+        <Label Content="Pesquisa" HorizontalAlignment="Left" Margin="363,64,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14" RenderTransformOrigin="0.581,-0.309"/>
+        <TextBox x:Name="txbPesquisa" HorizontalAlignment="Left" Height="23" Margin="363,99,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="259"/>
+        <Button x:Name="btnPesquisar" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="627,69,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="BtnPesquisar_Click">
             <materialDesign:PackIcon Kind="Search" />
         </Button>
-        <Label Content="Qntd. contatos cadastrados: " HorizontalAlignment="Left" Margin="78,525,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,-0.128"/>
-        <Label x:Name="lblQtdContatos" Content="0" HorizontalAlignment="Left" Margin="239,525,0,0" VerticalAlignment="Top"/>
+        <Label Content="Qntd. contatos cadastrados: " HorizontalAlignment="Left" Margin="78,525,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.123,-0.128" FontFamily="Verdana" FontSize="14"/>
+        <Label x:Name="lblQtdContatos" Content="0" HorizontalAlignment="Left" Margin="283,525,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="14"/>
         <TreeView HorizontalAlignment="Left" Height="100" Margin="784,100,-90,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>

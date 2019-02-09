@@ -259,8 +259,7 @@ namespace CursoWPF01
                         Contato contato = banco.PesquisarPorId(Convert.ToInt32(txbID.Text));
                         if (contato != null)
                         {
-                            List<Contato> contatos = new List<Contato>();
-                            contatos.Add(contato);
+                            List<Contato> contatos = new List<Contato>{contato};
 
                             dgvContatos.ItemsSource = contatos;
                             dgvContatos.Items.Refresh();
@@ -273,7 +272,7 @@ namespace CursoWPF01
                         
                     }
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     MessageBox.Show($"Digite um ID Válido!");
 
@@ -286,6 +285,17 @@ namespace CursoWPF01
         private void DgvContatos_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             DesabilitarCampos("linhaDgv");
+        }
+
+        private void TxbID_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void BtnRelatorio_Click(object sender, RoutedEventArgs e)
+        {
+            Relatorio relatorio = new Relatorio();
+            relatorio.ShowDialog(); 
         }
     }
 }

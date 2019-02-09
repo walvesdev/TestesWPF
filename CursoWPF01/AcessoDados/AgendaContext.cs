@@ -13,7 +13,7 @@ namespace CursoWPF01
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server = (localdb)\MSSQLLocalDB; Database = AgendaDB; Trusted_Connection = True;");
+            optionsBuilder.UseSqlServer(@"Server = .\; Database = AgendaDB; Trusted_Connection = True;");
         }
     }
 }

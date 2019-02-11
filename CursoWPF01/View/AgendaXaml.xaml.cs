@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmissorRelatorios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -296,6 +297,12 @@ namespace CursoWPF01
         {
             Relatorio relatorio = new Relatorio();
             relatorio.ShowDialog(); 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            frmRelatorioContatos relatorioContatos = new frmRelatorioContatos();
+            relatorioContatos.ShowDialog();
         }
     }
 }

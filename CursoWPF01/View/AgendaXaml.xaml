@@ -47,6 +47,7 @@
         <Button x:Name="btnRelatorio" Style="{StaticResource MaterialDesignRaisedLightButton}" HorizontalAlignment="Left" Margin="627,129,0,0" VerticalAlignment="Top" Width="75" Height="53" Click="BtnRelatorio_Click" >
             <materialDesign:PackIcon Kind="Printer" />
         </Button>
+        <Button Content="Relatorio FRM" HorizontalAlignment="Left" Margin="574,524,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click"/>
 
     </Grid>
 </Window>

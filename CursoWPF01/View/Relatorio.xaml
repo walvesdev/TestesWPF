@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CursoWPF01"
         xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="CursoWPF01.Relatorio"
         mc:Ignorable="d"
-        Title="Relatorio" Height="450" Width="800" FontFamily="Verdana" FontSize="14" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="Relatorio" Height="450" Width="800" FontFamily="Verdana" FontSize="14" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" WindowState="Maximized">
     <Grid>
         <Viewer:CrystalReportsViewer x:Name="ContatosReportViewer" Margin="10"/>
 
